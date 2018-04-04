@@ -1,1 +1,24 @@
 # snakes-and-ladders-board
+-    CREATE function generateBoard
+-        INITIALIZE board to empty array
+-        INITIALIZE total to num multiply num
+-        LOOP from 0 to num and plus one for every iteration
+-            INITIALIZE temp to empty array
+-            total minus num for every iteration
+-            IF num is EVENS
+-                IF i is EVENS
+-                    LOOP from num to greater than 0 and minus one for every iteration
+-                        PUSH j plus total to temp
+-                ELSE
+-                    LOOP from 1 to less than equal num and plus one for every iteration
+-                        PUSH j plus total to temp
+-            ELSE
+-                IF i is ODDS
+-                    LOOP from num greater than 0 and minus one for every iteration
+-                        PUSH j plus total to temp
+-                ELSE
+-                    LOOP from 1 to less than equal num and plus one for every iteration
+-                        PUSH j plus total to temp
+
+-            PUSH temp to board
+-        RETURN board
