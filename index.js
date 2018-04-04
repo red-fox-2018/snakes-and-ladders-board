@@ -2,16 +2,14 @@ function generateBoard(num) {
     var result = []
     for(let row=num;row>0;row--){
         var nestedArr = []
+        var start = row * num
+        var end = start - num
         if(row%2==0){
-            var start = row*num
-            var end = start - num
             for(let col=start;col>end;col--){
                 nestedArr.push(col)
             }
         }
-        else if (row % 2 == 1 ) {
-            var start = row*num          
-            var end = start - num
+        else if (row % 2 == 1 ) {         
             for (let col = end+1; col <= start; col++) {
                 nestedArr.push(col)
             }
