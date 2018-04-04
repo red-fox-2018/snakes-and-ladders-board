@@ -3,13 +3,13 @@ function generateBoard(row) {
   let input = 1;
   for (var i = row - 1; i >= 0; i--) {
     newArr[i] = [];
-    if (i % 2 !== 0) {
-      for (let j = row - 1; j >= 0; j--) {
+    if ((row - i) % 2 === 1) {
+      for (let j = 0; j < row; j++) {
         newArr[i][j] = input;
         input++;
       }
     } else {
-      for (let j = 0; j < row; j++) {
+      for (let j = row - 1; j >= 0; j--) {
         newArr[i][j] = input;
         input++;
       }
@@ -52,4 +52,4 @@ function reverseRow(array) {
   */
 }
 
-console.log(generateBoard(5));
+console.log(generateBoard(10));
