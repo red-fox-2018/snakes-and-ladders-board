@@ -1,4 +1,26 @@
 function generateBoard(row) {
+  let newArr = [];
+  let input = 1;
+  for (var i = row - 1; i >= 0; i--) {
+    newArr[i] = [];
+    if (i % 2 !== 0) {
+      for (let j = row - 1; j >= 0; j--) {
+        newArr[i][j] = input;
+        input++;
+      }
+    } else {
+      for (let j = 0; j < row; j++) {
+        newArr[i][j] = input;
+        input++;
+      }
+    }
+  }
+  return newArr;
+
+
+
+
+  /*
   let totalLadder = Math.pow(row, 2);
   let board = [];
   for (var i = 0; i < row; i++) {
@@ -27,6 +49,7 @@ function reverseRow(array) {
     reversedArr.push(array[i]);
   }
   return reversedArr;
+  */
 }
 
-console.log(generateBoard(15));
+console.log(generateBoard(5));
