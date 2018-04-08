@@ -1,3 +1,5 @@
+const Table = require('cli-table');
+
 function generateBoard(num) {
     let board = [];
     let total = num * num;
@@ -30,11 +32,27 @@ function generateBoard(num) {
         board.push(temp);
     }
 
-    return board;
+    // cli table
+    let colwidth = [];
+    for (let i = 0; i < num; i++) {
+        colwidth.push(5);
+    }
+
+    let table = new Table({
+        colWidths: colwidth
+    });
+
+    for (let j = 0; j < board.length; j++) {
+        table.push(
+            board[j]
+        );
+    }
+
+    console.log(table.toString());
 }
 
-console.log(generateBoard(8));
+generateBoard(8);
 console.log()
-console.log(generateBoard(10));
+generateBoard(10);
 console.log()
-console.log(generateBoard(15));
+generateBoard(15);
